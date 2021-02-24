@@ -9,9 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    override func loadView() {
-        
-        view = UIView()
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        print("________________<START>_______________")
+        print(#function)
+        print(previousTraitCollection as Any)
+        print("_________________<END>________________")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        setupViews()
+    }
+
+    func setupViews() {
         view.backgroundColor = .systemBackground
         
         let imageView = UIImageView(image: UIImage(named: "backgroundImage"))
@@ -78,14 +89,7 @@ class ViewController: UIViewController {
             vibrantLabel.centerYAnchor.constraint(equalTo: vibrancyView.centerYAnchor)
             
         ])
-        
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
 
 }
 
