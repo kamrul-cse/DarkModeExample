@@ -48,9 +48,11 @@ class ViewController: UIViewController {
         vibrancyView.translatesAutoresizingMaskIntoConstraints = false
         blurView.contentView.addSubview(vibrancyView)
         
+        vibrancyView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(nextAction(sender:))))
+        
         let vibrantLabel = UILabel()
         vibrantLabel.translatesAutoresizingMaskIntoConstraints = false
-        vibrantLabel.text = "Vibrant Label"
+        vibrantLabel.text = "Go Next"
         vibrantLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         vibrancyView.contentView.addSubview(vibrantLabel)
         
@@ -89,6 +91,12 @@ class ViewController: UIViewController {
             vibrantLabel.centerYAnchor.constraint(equalTo: vibrancyView.centerYAnchor)
             
         ])
+    }
+    
+    @objc func nextAction(sender:UITapGestureRecognizer){
+        // do other task
+        print(#function)
+        ListVC.showVC(navController: navigationController)
     }
 
 }

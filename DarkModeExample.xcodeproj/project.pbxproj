@@ -13,6 +13,7 @@
 		11CA748C25E4CBE1007C96AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CA748A25E4CBE1007C96AD /* Main.storyboard */; };
 		11CA748E25E4CBE2007C96AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CA748D25E4CBE2007C96AD /* Assets.xcassets */; };
 		11CA749125E4CBE2007C96AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CA748F25E4CBE2007C96AD /* LaunchScreen.storyboard */; };
+		11CA749D25E77681007C96AD /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CA749C25E77681007C96AD /* ListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		11CA748D25E4CBE2007C96AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11CA749025E4CBE2007C96AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11CA749225E4CBE2007C96AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CA749C25E77681007C96AD /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				11CA748425E4CBE1007C96AD /* AppDelegate.swift */,
 				11CA748625E4CBE1007C96AD /* SceneDelegate.swift */,
 				11CA748825E4CBE1007C96AD /* ViewController.swift */,
+				11CA749C25E77681007C96AD /* ListVC.swift */,
 				11CA748A25E4CBE1007C96AD /* Main.storyboard */,
 				11CA748D25E4CBE2007C96AD /* Assets.xcassets */,
 				11CA748F25E4CBE2007C96AD /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CA749D25E77681007C96AD /* ListVC.swift in Sources */,
 				11CA748925E4CBE1007C96AD /* ViewController.swift in Sources */,
 				11CA748525E4CBE1007C96AD /* AppDelegate.swift in Sources */,
 				11CA748725E4CBE1007C96AD /* SceneDelegate.swift in Sources */,
