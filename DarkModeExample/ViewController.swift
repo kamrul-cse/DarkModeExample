@@ -7,6 +7,20 @@
 
 import UIKit
 
+extension UIColor {
+    public static var background: UIColor {
+        get {
+            if #available(iOS 13.0, *) {
+                return .systemBackground
+            } else {
+                return .white
+            }
+            
+        }
+        
+    }
+}
+
 class ViewController: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -23,7 +37,7 @@ class ViewController: UIViewController {
     }
 
     func setupViews() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .background
         
         let imageView = UIImageView(image: UIImage(named: "backgroundImage"))
         imageView.contentMode = .scaleAspectFill
@@ -37,12 +51,23 @@ class ViewController: UIViewController {
         myLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         view.addSubview(myLabel)
         
-        let blurEffect = UIBlurEffect(style: .systemThinMaterial)
+        var blurEffect: UIBlurEffect
+        if #available(iOS 13.0, *) {
+            blurEffect = UIBlurEffect(style: .systemThinMaterial)
+        } else {
+            // Fallback on earlier versions
+            blurEffect = UIBlurEffect(style: .light)
+        }
         let blurView = UIVisualEffectView()
         blurView.effect = blurEffect
         blurView.translatesAutoresizingMaskIntoConstraints = false
         
-        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect, style: .secondaryLabel)
+        var vibrancyEffect: UIVibrancyEffect
+        if #available(iOS 13, *) {
+            vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect, style: .secondaryLabel)
+        } else {
+            vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
+        }
         
         let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
         vibrancyView.translatesAutoresizingMaskIntoConstraints = false
